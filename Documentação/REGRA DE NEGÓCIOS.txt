@@ -1,0 +1,146 @@
+REGRA DE NEGÓCIOS: 
+PROJETO INTEGRADOR SOBRE O MEIO AMBIENTE. 
+ 
+"Primeira documentação da regra de negócios"
+ 
+Especificação do Sistema – Aplicativo de Reciclagem “ReciCycle” 
+ 
+1. Visão Geral 
+Nome do Projeto: “ReciCycle” 
+Desenvolver um sistema multiplataforma (Web, Mobile e Desktop) que, inicialmente, incentive a população de Taboão da Serra a realizar a reciclagem de maneira simples, rastreável e recompensadora, com o objetivo de futuramente expandir o uso da plataforma para outras localidades. O sistema visa promover a sustentabilidade, a educação ambiental e a inclusão social por meio do engajamento da comunidade e da valorização dos resíduos recicláveis. 
+ 
+ 
+2. Público-Alvo 
+Moradores de Taboão da Serra (inicialmente) 
+Catadores e cooperativas de reciclagem 
+Comércios locais e parceiros que trocam recompensas 
+ 
+3. Funcionalidades Gerais 
+Cadastro de usuários e login 
+Cadastro de reciclagem (com tipo, quantidade, foto, local) 
+Pontuação automática conforme material reciclado 
+Ranking de usuários 
+Sistema de recompensas (resgates, histórico) 
+Localização de postos de coleta 
+Notificações e campanhas de incentivo 
+Área administrativa (para gerenciamento dos dados) 
+Dashboard para cooperativas acompanharem coletas 
+ 
+4.
+Código | Requisito Funcional | Descrição
+
+RF001 – Cadastro de usuário
+Permitir o cadastro de pessoa física com nome, CPF, e-mail, telefone e endereço.
+
+RF002 – Login de usuário
+Autenticação via e-mail ou telefone.
+
+RF003 – Cadastro de reciclagem
+O usuário pode registrar materiais reciclados, informando tipo, quantidade, foto e posto de coleta.
+
+RF004 – Consulta de pontos
+Usuário pode visualizar seu saldo de pontos e histórico.
+
+RF005 – Resgate de recompensas
+Permitir que o usuário troque pontos por benefícios diversos.
+
+RF006 – Visualização de postos de coleta
+Exibir mapa com geolocalização e dados dos postos de coleta mais próximos.
+
+RF007 – Cadastro de cooperativas e postos
+Permitir que o administrador cadastre ou altere dados de postos e cooperativas.
+
+RF008 – Ranking de reciclagem
+Exibir os usuários com maior pontuação semanal e mensal.
+
+RF009 – Verificação de reciclagem
+Permitir que o posto de coleta ou cooperativa valide os materiais cadastrados pelos usuários. 
+ 
+
+5.
+Código | Requisito Não Funcional | Descrição
+
+RNF001 – Multiplataforma
+O sistema deve funcionar em Web, Android, iOS e Desktop (Windows, Linux e macOS).
+
+RNF002 – Alta disponibilidade
+O sistema deve estar acessível 24 horas por dia, 7 dias por semana, com 99% de tempo de atividade (uptime).
+
+RNF003 – Escalabilidade
+O sistema deve suportar o aumento de usuários, dados e funcionalidades sem perda de desempenho.
+
+RNF004 – Segurança de dados
+Os dados devem ser armazenados com criptografia (por exemplo, senhas hash) e protegidos contra acessos não autorizados.
+
+RNF005 – Usabilidade
+A interface deve ser simples, intuitiva e acessível, inclusive para idosos e usuários iniciantes.
+
+RNF006 – Backup automático
+O sistema deve realizar backups automáticos e periódicos de forma segura.
+
+RNF007 – Suporte offline (mobile)
+O cadastro de reciclagem deve funcionar mesmo sem conexão à internet, sincronizando automaticamente quando o dispositivo estiver online novamente.
+
+RNF008 – Responsividade
+A interface deve se adaptar a diferentes tamanhos de tela e dispositivos.
+
+RNF009 – Limite diário
+Cada usuário poderá registrar no máximo 10 itens de reciclagem por dia.
+
+RNF010 – Notificações
+O sistema deve enviar automaticamente mensagens sobre campanhas, prêmios e atualizações.
+
+RNF011 – Cálculo de pontuação
+Os pontos serão adicionados conforme o tipo de material reciclado (exemplo: 10 pontos para alumínio). 
+ 
+
+6. Modelo de Pontuação por Material (Regra de Negócio)
+
+O sistema de pontuação foi criado para incentivar a reciclagem por meio da atribuição de pontos a cada material reciclado, considerando seu impacto ambiental e valor de mercado.
+
+Tabela de Pontuação:
+
+Alumínio: 10 pontos por lata
+
+Plástico (PET): 8 pontos por garrafa
+
+Papel/Papelão: 5 pontos por quilograma (kg)
+
+Vidro: 4 pontos por unidade
+
+Eletrônicos: 20 pontos por unidade
+
+Óleo usado: 15 pontos por litro 
+
+
+7. Perfis de Usuário 
+Usuário comum: Cadastra reciclagem, consulta pontos, troca recompensas 
+Catador/Cooperativa: Valida coletas, recebe informações e apoio 
+Administrador: Gera relatórios, gerencia usuários, materiais e recompensas 
+ 
+
+8. Tecnologias (a definir) 
+Linguagem de Programação: Ainda não definida (sugestões possíveis: JavaScript, Dart, Python, etc.) 
+Frameworks possíveis: React, Flutter, Django, Node.js 
+Banco de Dados: PostgreSQL, Firebase ou MongoDB 
+Hospedagem: AWS, Firebase, Heroku, ou similar 
+ 
+
+9. Casos de Uso (simplificado) 
+UC01 – Cadastrar usuário 
+UC02 – Logar no sistema 
+UC03 – Registrar reciclagem 
+UC04 – Calcular pontuação 
+UC05 – Resgatar recompensa 
+UC06 – Visualizar pontos e ranking 
+UC07 – Localizar posto de coleta 
+UC08 – Validar reciclagem (posto) 
+UC09 – Gerenciar recompensas (admin) 
+ 
+
+10. Possíveis Expansões Futuras 
+Integração com escolas (educação ambiental + pontuação para alunos) 
+Gamificação (desafios, níveis, conquistas) 
+Integração com prefeitura para políticas públicas 
+API pública para outras plataformas usarem o sistema 
+Cadastro de eventos de coleta em comunidades 
